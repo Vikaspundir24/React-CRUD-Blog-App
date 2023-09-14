@@ -4,15 +4,23 @@ import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
 import { UserAuthContextProvider } from "./Context/UserAuthContext";
 import Home from "./Components/Home";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
   return (
     <div className="App">
       <UserAuthContextProvider>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route
+            path="/home"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Login />} />
         </Routes>
       </UserAuthContextProvider>
     </div>
