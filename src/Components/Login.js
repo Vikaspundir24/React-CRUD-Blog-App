@@ -10,7 +10,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const { logIn } = useUserAuth();
+  const { logIn, googleSignIn } = useUserAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -23,6 +23,16 @@ function Login() {
       setError(err.message);
     }
   };
+
+  const handleGoogleSignIn = async(e) => {
+    e.preventDefault()
+     try{
+      await googleSignIn()
+      navigate("/Home")
+     }catch(err){
+      console.log(err.message)
+     }
+  }
 
   return (
     <div>
@@ -47,11 +57,9 @@ function Login() {
             />
           </Form.Group>
           <div className="text-center buttons">
-            <Button type="submit" variant="outline-primary">Login With Email</Button>{" "}
+            <Button type="submit" variant="outline-primary">Login With Email</Button>
             <GoogleButton
-              onClick={() => {
-                console.log("Google button clicked");
-              }}
+              onClick={handleGoogleSignIn}
             />
           </div>
         </Form>

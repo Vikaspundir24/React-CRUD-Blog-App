@@ -7,6 +7,7 @@ import Home from "./Components/Home";
 import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
+  
   return (
     <div className="App">
       <UserAuthContextProvider>

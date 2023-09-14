@@ -52,7 +52,7 @@ function SignUp() {
           <div className="text-center buttons">
             <Button type="submit" variant="outline-primary">
               Sign Up
-            </Button>{" "}
+            </Button>
           </div>
         </Form>
       </div>
