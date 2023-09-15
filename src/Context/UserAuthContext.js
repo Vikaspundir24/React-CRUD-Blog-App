@@ -18,12 +18,10 @@ export function UserAuthContextProvider({ children }) {
     return createUserWithEmailAndPassword(auth, email, password);
   }
   function logIn(email, password) {
-    localStorage.setItem('user', true);
     return signInWithEmailAndPassword(auth, email, password);
   }
 
   function logOut() {
-    localStorage.removeItem('user');
     return signOut(auth);
   }
 

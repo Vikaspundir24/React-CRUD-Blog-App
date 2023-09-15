@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import { Link,useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useUserAuth } from "../Context/UserAuthContext";
-
+import "./SignUp.css"
 
 
 function SignUp() {
@@ -28,7 +28,7 @@ function SignUp() {
 
 
   return (
-    <div>
+    <div className="app">
       <div className="container ">
         <h4>Sign In</h4>
         {error && <Alert variant ="danger">{error}</Alert>}

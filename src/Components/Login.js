@@ -4,6 +4,7 @@ import GoogleButton from "react-google-button";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useUserAuth } from "../Context/UserAuthContext";
+import "./Login.css"
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -35,7 +36,7 @@ function Login() {
   }
 
   return (
-    <div>
+    <div className="app">
       <div className="container ">
         <h4>Log in</h4>
         {error && <Alert variant ="danger">{error}</Alert>}
