@@ -4,11 +4,10 @@ import { useUserAuth } from "../Context/UserAuthContext";
 
 function ProtectedRoute({ children }) {
   let { user } = useUserAuth();
-  console.log(user)
   if (!user) {
     return <Navigate to="/" />;
   }
   return children;
 }
 
-export default ProtectedRoute;
+export default ProtectedRoute; 

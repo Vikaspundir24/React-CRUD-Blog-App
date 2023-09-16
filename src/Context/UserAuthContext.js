@@ -12,7 +12,7 @@ import { auth } from "../Firebase";
 const userAuthContext = createContext();
 
 export function UserAuthContextProvider({ children }) {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState({});
 
   function signUp(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -22,6 +22,7 @@ export function UserAuthContextProvider({ children }) {
   }
 
   function logOut() {
+    setUser("")
     return signOut(auth);
   }
 

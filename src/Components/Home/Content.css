@@ -1,0 +1,21 @@
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.button{
+    display: flex;
+    gap: 20px;
+}
+
+.content-container{
+    width: 45vw;
+}
+
+.heading{
+    font-weight: 600;
+}
