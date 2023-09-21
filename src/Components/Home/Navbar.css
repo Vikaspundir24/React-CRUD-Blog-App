@@ -11,3 +11,33 @@
 .logo{
     font-size: 34px;
 }
+
+@media screen and (max-width:767px){
+    .nav-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .nav-main button{
+        font-size: 12px;
+    }
+
+    .bg-body-tertiary{
+        padding: 10px 30px;
+    }
+    .justify-content-end{
+        gap: 20px;
+    }
+    
+    .refresh-blogs{
+        margin-left: 0px;
+    }
+    .logo{
+        font-size: 28px;
+    }
+    
+}

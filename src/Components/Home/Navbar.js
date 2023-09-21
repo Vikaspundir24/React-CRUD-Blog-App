@@ -23,7 +23,7 @@ function NavbarComponent({
     } catch (err) {}
   };
   return (
-    <Navbar className="bg-body-tertiary">
+    <Navbar className="bg-body-tertiary nav-main">
       <Navbar.Brand href="#home" className="logo">Blogger.com</Navbar.Brand>
       <InputModal
         show={show}
