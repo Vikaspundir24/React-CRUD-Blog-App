@@ -69,9 +69,21 @@ function InputModal({
     setLoading(false)
   };
 
+  const handleEmptyClose = () => {
+    setBlogId("")
+    handleClose()
+  }
+  const handleNewShow = () => {
+    if(!id){
+      setContent("")
+      setTitle("")
+    }
+    handleShow()
+  }
+
   return (
     <div className="input-modal">
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleNewShow}>
         Add a New Blog
       </Button>
       <Form>
@@ -109,7 +121,7 @@ function InputModal({
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="secondary" onClick={handleEmptyClose}>
               Close
             </Button>
             <Button variant="primary" type="submit" onClick={handleSubmit}>
